@@ -29,52 +29,58 @@
                 <p class="form-text2">You know you want to.</p>
             </div>
 
-            <form class="form-container" action="/">
-                <h1 class="form-header">Let's do this!</h1>
-
+            <form class="form-container">
                 <div class="form-control-container">
+                    <h1 class="form-header">Let's do this!</h1>
+
                     <div class="form-row">
                         <div class="form-control">
                             <label for="first-name">FIRST NAME</label>
-                            <input type="text">
+                            <input type="text" id="first-name" name="first-name" required>
                         </div>
 
                         <div class="form-control">
                             <label for="last-name">LAST NAME</label>
-                            <input type="text">
+                            <input type="text" id="last-name" name="last-name" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-control">
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email">
+                            <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="form-control">
                             <label for="phone-number">PHONE NUMBER</label>
-                            <input type="tel" id="phone-number">
+                            <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{6,12}" maxlength="12"
+                                title="Phone number length must be between 6 and 12 and only contain numbers." required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-control"><label for="password">PASSWORD</label>
-                            <input type="password" id="password">
+                            <input type="password" id="password" name="password"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Password must contain atleast one uppercase, one lowercase, one number, and be least 8 or more characters long."
+                                required>
                         </div>
 
                         <div class="form-control">
                             <label for="confirm-pass">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm-pass">
+                            <input type="password" id="confirm-pass" name="confirm-pass"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Password must contain atleast one uppercase, one lowercase, one number, and be least 8 or more characters long."
+                                required>
                         </div>
                     </div>
                 </div>
 
+                <div class="button-container">
+                    <button class="create-btn" type="submit">Create Account</button>
+                    <p>Already have an account? <a href="#">Log in</a></p>
+                </div>
             </form>
-
-            <div class="button-container">
-                <button class="create-btn" type="submit">Create Account</button>
-                <p>Already have an account? <a href="#">Log in</a></p>
-            </div>
         </section>
     </main>
 </body>

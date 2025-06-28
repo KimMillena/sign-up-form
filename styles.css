@@ -83,7 +83,6 @@ body {
 /* FORM SECTION STYLES */
 
 .paragraph-container,
-.form-container,
 .button-container {
   padding: 2rem;
 }
@@ -104,28 +103,26 @@ body {
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #fff;
-  box-shadow: 5px 1px 8px 1px var(--light-green);
   margin-bottom: 2rem;
 }
 
 .form-header {
-  margin-bottom: 1rem;
   color: var(--dark-color);
 }
 
 .form-control-container {
   display: flex;
   flex-direction: column;
+  background-color: var(--light-color);
+  box-shadow: 5px 1px 8px 1px var(--light-green);
+  padding: 2rem;
   gap: 1rem;
 }
 
 .form-row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -135,18 +132,29 @@ body {
   color: var(--dark-color);
 }
 
-.form-control input {
-  width: 200px;
-  height: 40px;
-  border: 1px solid var(--border-color);
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-}
-
 .form-control label {
   color: var(--dark-color);
   margin-top: 1rem;
   margin-bottom: 0.25rem;
+}
+
+.form-control input {
+  width: 200px;
+  height: 40px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.form-control input:focus {
+  border: 2px solid var(--border-color);
+}
+
+.form-control input:invalid {
+  border: 2px solid red;
+}
+
+.form-control input:valid {
+  border: 2px solid var(--medium-green);
 }
 
 /* BUTTON STYLES */
